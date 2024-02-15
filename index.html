@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IDK What this</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            color: rgb(78, 78, 78);
+            animation: blink 0.5s linear infinite both;
+            font-family: monospace;
+
+        
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        @keyframes blink {
+            0% {
+                color: white;
+            }
+
+            100% {
+                color: rgb(78, 78, 78);
+            }
+        }
+
+        .page-home {
+            display: grid;
+            grid-template: 10% 60% 30% / 50% auto 40%;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+        }
+
+        .page-home div {
+            border: 2px solid rgb(34, 34, 34);
+        }
+
+        .page-title-con {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+
+            display: flex;
+            float: left;
+            align-items: center;
+        }
+
+        .page-title-con h4 {
+            margin: 0 0 0 5%;
+        }
+
+        .page-navbar-con {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+
+
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .navbar li {
+            width: 10%;
+            list-style: none;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(77, 77, 77);
+            animation: blink 0.5s linear infinite both;
+
+        }
+
+        .page-main-con {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+
+
+            display: grid;
+            place-items: center;
+        }
+
+        .page-notice-con {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+            overflow-x: auto;
+            --sb-track-color: rgb(32, 32, 32);
+            --sb-thumb-color: rgb(51, 51, 51);
+            --sb-size: 10px;
+        }
+
+        .page-notice-con::-webkit-scrollbar {
+            width: var(--sb-size);
+        }
+
+        .page-notice-con::-webkit-scrollbar-track {
+            background: var(--sb-track-color);
+            border-radius: 3px;
+        }
+
+        .page-notice-con::-webkit-scrollbar-thumb {
+            background: var(--sb-thumb-color);
+            border-radius: 3px;
+        }
+
+        @supports not selector(::-webkit-scrollbar) {
+            .page-notice-con {
+                scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+            }
+        }
+
+        .notification {
+            background-color: rgb(8, 8, 8);
+            color: #bdbdbd;
+            padding: 15px;
+            border-left: 5px solid #bdbdbd;
+            width: 85%;
+            height: 3rem;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: #bdbdbd;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: #2e2e2e;
+        }
+
+
+        .page-connect-con {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+
+            display: grid;
+            place-items: center;
+        }
+
+        .page-features {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+        }
+
+        .page-about {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+        }
+
+        .page-enquiry {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+        }
+
+        .page-whitelist {
+            display: grid;
+            place-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="script.js"></script>
+    <div class="page-home" id="home">
+        <div class="page-title-con">
+            <h4>LifeX Play</h4>
+        </div>
+        <div class="page-navbar-con">
+            <ul class="navbar">
+                <li class="navbar-links"><a href="#home">HOME</a></li>
+                <li class="navbar-links"><a href="#features">FEATURES</a></li>
+                <li class="navbar-links"><a href="#about">ABOUT</a></li>
+                <li class="navbar-links"><a href="#enquiry">ENQUIRY</a></li>
+                <li class="navbar-links"><a href="#whitelist">WHITELIST</a></li>
+            </ul>
+        </div>
+        <div class="page-main-con">
+            <p>Main content goes here</p>
+        </div>
+        <div class="page-notice-con">
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+            <div class="notification">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                <p>This is a notification message.</p>
+            </div>
+        </div>
+        <div class="page-connect-con">
+            <p>Social Links goes here</p>
+        </div>
+    </div>
+    <div class="page-features" id="features">
+        <h1>FEATURES</h1>
+    </div>
+    <div class="page-about" id="about">
+        <h1>ABOUT</h1>
+    </div>
+    <div class="page-enquiry" id="enquiry">
+        <h1>ENQUIR</h1>
+    </div>
+    <div class="page-whitelist" id="whitelist">
+        <h1>WHITELIST</h1>
+    </div>
+</body>
+
+</html>
