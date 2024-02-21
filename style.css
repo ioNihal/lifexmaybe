@@ -9,8 +9,8 @@ body {
     height: 100vh;
     width: 100%;
     color: rgb(78, 78, 78);
-    animation: blink 0.5s linear infinite both;
-    font-family: monospace;
+    /*animation: blink 0.5s linear infinite both;*/
+
 
 
 }
@@ -53,8 +53,11 @@ body::-webkit-scrollbar {
     align-items: center;
 }
 
-.page-title-con h4 {
-    margin: 0 0 0 5%;
+.page-title-con h1 {
+    margin: 0 0 0 6%;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .page-navbar-con {
@@ -87,7 +90,11 @@ body::-webkit-scrollbar {
 .navbar li a {
     text-decoration: none;
     color: rgb(77, 77, 77);
-    animation: blink 0.5s linear infinite both;
+    /*animation: blink 0.5s linear infinite both;*/
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -100,6 +107,13 @@ body::-webkit-scrollbar {
 
     display: grid;
     place-items: center;
+    animation: blink 0.5s linear infinite both;
+
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 5px;
+
 }
 
 .page-notice-con {
@@ -145,16 +159,20 @@ body::-webkit-scrollbar {
 
 .notification {
     background-color: rgb(8, 8, 8);
-    color: #bdbdbd;
+    color: rgb(128, 128, 128);
     padding: 15px;
-    border-left: 5px solid #bdbdbd;
+    border-left: 5px solid rgb(34, 34, 34);
     width: 85%;
     height: 3rem;
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .closebtn {
     margin-left: 15px;
-    color: #bdbdbd;
+    color: rgb(34, 34, 34);
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -183,6 +201,10 @@ body::-webkit-scrollbar {
 
 .page-connect-con h2 {
     text-align: center;
+    font-family: "Libre Barcode 39 Extended Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(100, 100, 100);
 }
 
 .icon-list {
@@ -194,6 +216,7 @@ body::-webkit-scrollbar {
 
 .sm_icon {
     margin: 20px;
+    opacity: 40%;
 }
 
 .sm_icon:hover {
