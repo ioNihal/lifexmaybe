@@ -58,6 +58,7 @@ body::-webkit-scrollbar {
     font-family: "Silkscreen", sans-serif;
     font-weight: 400;
     font-style: normal;
+    user-select: none;
 }
 
 .page-navbar-con {
@@ -96,7 +97,10 @@ body::-webkit-scrollbar {
     font-weight: 400;
     font-style: normal;
     font-size: 1.3rem;
+}
 
+.navbar li a:hover {
+    color: rgb(173, 173, 173);
 }
 
 .page-main-con {
@@ -108,13 +112,15 @@ body::-webkit-scrollbar {
 
     display: grid;
     place-items: center;
-    animation: blink 0.5s linear infinite both;
+
+    /*animation: blink 0.5s linear infinite both;*/
 
     font-family: "Staatliches", sans-serif;
     font-weight: 200;
     font-style: normal;
     letter-spacing: 5px;
 
+    position: relative;
 }
 
 .slideshow {
@@ -130,7 +136,7 @@ body::-webkit-scrollbar {
 .slideshow,
 .slideshow div {
     border: none !important;
-    box-shadow: 1px 1px 50px 50px black;
+    box-shadow: 1px 1px 50px 50px rgb(8, 8, 8);
     border-radius: 10px;
 }
 
@@ -141,7 +147,7 @@ body::-webkit-scrollbar {
     z-index: 3;
     left: 0;
     top: 0;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815) 10%, transparent);
+    background-image: linear-gradient(to right, rgba(8, 8, 8, 0.836) 10%, transparent);
 }
 
 .slider-overlay-right {
@@ -151,24 +157,23 @@ body::-webkit-scrollbar {
     z-index: 3;
     left: 0;
     top: 0;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.863), transparent);
+    background-image: linear-gradient(to left, rgba(8, 8, 8, 0.836) 10%, transparent);
 }
 
 .slideshow img {
+    user-select: none;
     position: absolute;
     width: 70%;
     height: 50%;
     object-fit: cover;
     opacity: 0.1;
-    border-radius: 10px;
-    border: 2px solid rgb(34, 34, 34);
+    border-radius: 15px;
+    border: 4px solid rgb(34, 34, 34);
     z-index: 1;
     transition: opacity 1s ease-in-out;
 
     -webkit-transform: translateZ(160px) translateX(100px);
     transform: translateZ(160px) translateX(100px);
-
-
 }
 
 .slideshow img.slideIn {
@@ -253,6 +258,33 @@ body::-webkit-scrollbar {
     }
 }
 
+.page-main-con p {
+    position: absolute;
+    bottom: 12em;
+    z-index: 4;
+    text-align: center;
+    width: 55%;
+    font-size: 0.8rem;
+    color: rgb(99, 99, 99) !important;
+}
+
+.page-main-con button {
+    position: absolute;
+    z-index: 4;
+    top: 8em;
+
+    background-color: rgb(8, 8, 8);
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 5px;
+    color: rgb(99, 99, 99) !important;
+    font-family: "Silkscreen", sans-serif;
+
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.2rem;
+
+}
+
 
 .page-notice-con {
     grid-column-start: 3;
@@ -299,7 +331,6 @@ body::-webkit-scrollbar {
     background-color: rgb(8, 8, 8);
     color: rgb(129, 129, 129);
     padding: 15px;
-    border-left: 5px solid rgb(34, 34, 34);
     width: 85%;
     height: 3rem;
 
