@@ -9,22 +9,23 @@ window.onload = function () {
     var interval = 3000; // 3 seconds
 
 
-    images[currentIndex].classList.remove("initHidden");
-    images[currentIndex].classList.remove("slideOut");
+    images[currentIndex].classList.remove("slideRight");
+    images[currentIndex].classList.remove("slideLeft");
     images[currentIndex].classList.add("slideIn");
 
 
     setInterval(function () {
         images[currentIndex].classList.remove("slideIn");
-        images[currentIndex].classList.add("slideOut");
+        images[currentIndex].classList.add("slideLeft");
         //console.log("current img focus")
         currentIndex++;
 
         if (currentIndex == numImages) {
             currentIndex = 0;
         }
-        images[currentIndex].classList.remove("initHidden");
-        images[currentIndex].classList.remove("slideOut");
+        images[currentIndex].classList.remove("slideRight");
+        images[currentIndex].classList.remove("slideBack");
+        images[currentIndex].classList.remove("slideLeft");
         images[currentIndex].classList.add("slideIn");
         //console.log("current img focus")
 
@@ -34,9 +35,21 @@ window.onload = function () {
         }
 
         images[prevIndex].classList.remove("slideIn");
-        images[prevIndex].classList.remove("initHidden");
-        images[prevIndex].classList.add("slideOut");
+        images[prevIndex].classList.remove("slideRight");
+        images[prevIndex].classList.remove("slideBack");
+        images[prevIndex].classList.add("slideLeft");
         //console.log("prev img left")
+
+        var midIndex = prevIndex - 1;
+        if (midIndex < 0) {
+            midIndex = 3;
+        }
+
+        images[midIndex].classList.remove("slideRight");
+        images[midIndex].classList.remove("slideIn");
+        images[midIndex].classList.remove("slideLeft");
+        images[midIndex].classList.add("slideBack");
+        //console.log("mid img back")
 
         var nextIndex = currentIndex + 1;
         if (nextIndex > 3) {
@@ -44,8 +57,9 @@ window.onload = function () {
         }
 
         images[nextIndex].classList.remove("slideIn");
-        images[nextIndex].classList.remove("slideOut");
-        images[nextIndex].classList.add("initHidden");
+        images[nextIndex].classList.remove("slideLeft");
+        images[nextIndex].classList.remove("slideBack");
+        images[nextIndex].classList.add("slideRight");
         //console.log("next img right")
     }, interval);
 
