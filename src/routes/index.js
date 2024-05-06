@@ -1,10 +1,10 @@
 // index.js
 
-const Discord = require('discord.js');
-const config = require('/src/config/discordConfig'); // Adjust the path as needed
+import { Client } from 'discord.js';
+import { token } from '/src/config/discordConfig'; // Adjust the path as needed
 
-const client = new Discord.Client();
+const client = new Client();
 
 // Your bot logic goes here
 
-client.login(config.token); // Log in using the bot token
+client.login(token); // Log in using the bot token
