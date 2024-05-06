@@ -525,3 +525,18 @@ body::-webkit-scrollbar {
     width: 100%;
     background-color: rgb(8, 8, 8);
 }
+
+#whitelist-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #7289da; /* Discord brand color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#whitelist-btn:hover {
+    background-color: #5b6eae;
+}
