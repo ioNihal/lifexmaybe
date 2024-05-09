@@ -1,0 +1,50 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap" rel="stylesheet">
+    <title>DISCORD INFO</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .page-whitelist {
+            display: grid;
+            place-items: center;
+            height: 70%;
+            width: 100%;
+            background-color: rgb(8, 8, 8);
+            color: azure;
+
+            font-family: "Staatliches", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-whitelist" id="whitelist">
+        <h1>YOUR Discord info</h1>
+        <p>Hello, <%= username %>!</p>
+        <p>Your IP Address: <%= ipAddress %>
+        </p>
+
+    </div>
+    <!-- Your existing content goes here -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
