@@ -65,4 +65,8 @@ window.onload = function () {
 
 }
 
+function toAuth() {
+    location.href = "http://localhost:3000/authorize";
+}
+
 

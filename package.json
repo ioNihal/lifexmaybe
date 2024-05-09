@@ -1,15 +1,26 @@
 {
   "name": "lifexmaybe",
   "version": "1.0.0",
-  "description": "",
+  "description": "DISCORD BOT",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:Dev": "nodemon server.js",
+    "start:Bot": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
+    "discord.js": "^14.15.2",
+    "ejs": "^3.1.10",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodeman": "^1.1.2",
+    "nodemon": "^3.1.0"
   }
 }
