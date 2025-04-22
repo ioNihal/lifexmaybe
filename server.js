@@ -29,7 +29,7 @@ app.get('/launch', (req,res) => {
 // Redirect to Discord OAuth2 authorization URL
 app.get('/authorize', (req, res) => {
     const clientId = CLIENT_ID;
-    const redirectUri = 'http://localhost:3000/callback';
+    const redirectUri = 'https://lifexmaybe.vercel.app/callback';
     res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=identify`);
 });
 
@@ -39,7 +39,7 @@ app.get('/callback', async (req, res) => {
         const code = req.query.code;
         const clientId = CLIENT_ID;
         const clientSecret = CLIENT_SECRET;
-        const redirectUri = 'http://localhost:3000/callback'; // Make sure this matches your Discord app settings
+        const redirectUri = 'https://lifexmaybe.vercel.app/callback'; // Make sure this matches your Discord app settings
 
         // Exchange authorization code for access token
         const response = await axios.post('https://discord.com/api/oauth2/token', qs.stringify({
